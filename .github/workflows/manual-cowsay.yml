@@ -16,7 +16,7 @@ jobs:
     name: a cow that say somethink
     runs-on: ubuntu-latest
     steps:
-      - uses: o-devops/debug@main
+      - uses: o-devops/debug@0.0.1
       - run: |
           whoami
           sudo apt update
