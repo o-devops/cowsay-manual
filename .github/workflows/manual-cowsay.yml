@@ -1,0 +1,24 @@
+---
+
+name: manual run cowsay
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'a message to cowsay'
+        required: true
+        default: 'Hello DevOps !'
+        type: text
+
+jobs:
+  cowsay:
+    name: a cow that say somethink
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          apt update
+          apt install cowsay
+          cowsay $MESSAGE
+        env:
+          MESSAGE: ${{ inputs.message }}
