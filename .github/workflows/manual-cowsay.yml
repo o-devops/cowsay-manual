@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          whoami
           sudo apt update
           sudo apt -y install cowsay
           cowsay $MESSAGE
