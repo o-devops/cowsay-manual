@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          apt update
-          apt install cowsay
+          sudo apt update
+          sudo apt -y install cowsay
           cowsay $MESSAGE
         env:
           MESSAGE: ${{ inputs.message }}
